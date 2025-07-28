@@ -1,7 +1,7 @@
 using Gossip.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Gossip.Services;
+namespace Gossip.Services.Profiles;
 
 public class EFProfileService(GossipDbContext ctx) : IProfilesService
 {

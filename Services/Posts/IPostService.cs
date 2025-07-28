@@ -1,4 +1,4 @@
-namespace Gossip.Services;
+namespace Gossip.Services.Post;
 
 public interface IPostsService
 {

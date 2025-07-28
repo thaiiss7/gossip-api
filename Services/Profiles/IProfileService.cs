@@ -1,6 +1,6 @@
 using Gossip.Models;
 
-namespace Gossip.Services;
+namespace Gossip.Services.Profiles;
 
 public interface IProfilesService
 {

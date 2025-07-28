@@ -1,5 +1,6 @@
 using Gossip.Models;
 using Gossip.Services;
+using Gossip.Services.Profiles;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
