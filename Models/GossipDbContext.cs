@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Gossip.Models;
 
-public class FofoquinhaDbContext(DbContextOptions options) : DbContext(options)
+public class GossipDbContext(DbContextOptions options) : DbContext(options)
 {
     public DbSet<Profile> Profiles => Set<Profile>();
     public DbSet<Post> Posts => Set<Post>();

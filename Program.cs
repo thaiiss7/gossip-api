@@ -1,6 +1,16 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using Gossip.Models;
+using Gossip.Services;
+using Microsoft.EntityFrameworkCore;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<GossipDbContext>(options => {
+    var sqlConn = Environment.GetEnvironmentVariable("SQL_CONNECTION");
+    options.UseSqlServer(sqlConn);
+});
+
+builder.Services.AddTransient<IProfilesService, EFProfileService>();
+
+var app = builder.Build();
 
 app.Run();
